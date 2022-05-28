@@ -14,7 +14,7 @@
 
 ### eslint を導入
 
-1. `npm install --save-dev eslint-config-prettier`
+1. `npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier`
 2. `.eslintrc.json` を作成
 
 ### VSCode の設定
