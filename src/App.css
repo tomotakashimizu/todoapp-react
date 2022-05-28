@@ -32,13 +32,15 @@ h1 {
 
 #grid-container {
   display: grid;
-  grid-template-rows: 55px auto auto;
-  grid-template-columns: minmax(0px, 100px) minmax(300px, 500px) minmax(0px, 100px);
+  grid-template:
+    "................... input                ..................." 55px
+    "incomplete          incomplete           incomplete         " auto
+    "complete            complete             complete           " auto
+    / minmax(0px, 100px) minmax(300px, 500px) minmax(0px, 100px);
 }
 
 #input-area {
-  grid-row: 1 / 2;
-  grid-column: 2 / 3;
+  grid-area: input;
   height: 30px;
   text-align: center;
   background-color: #c1ffff;
@@ -48,8 +50,7 @@ h1 {
 }
 
 #incomplete-area {
-  grid-row: 2 / 3;
-  grid-column: 1 / 4;
+  grid-area: incomplete;
   min-height: 200px;
   background-color: #c6ffe2;
   padding: 8px;
@@ -58,8 +59,7 @@ h1 {
 }
 
 #complete-area {
-  grid-row: 3 / 4;
-  grid-column: 1 / 4;
+  grid-area: complete;
   min-height: 200px;
   background-color: #ffffe0;
   padding: 8px;
