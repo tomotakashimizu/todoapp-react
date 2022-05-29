@@ -39,16 +39,6 @@ h1 {
     / minmax(0px, 100px) minmax(300px, 500px) minmax(0px, 100px);
 }
 
-#input-area {
-  grid-area: input;
-  height: 30px;
-  text-align: center;
-  background-color: #c1ffff;
-  border-radius: 8px;
-  padding: 8px;
-  margin: 8px;
-}
-
 #incomplete-area {
   grid-area: incomplete;
   min-height: 200px;
