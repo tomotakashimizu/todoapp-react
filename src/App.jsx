@@ -47,7 +47,7 @@ export const App = () => {
             <ul>
               {incompleteTodos.map((todo, index) => {
                 return (
-                  <li key='todo'>
+                  <li key={todo}>
                     <div className='list-row'>
                       <p>{todo}</p>
                       <button onClick={() => onClickComplete(index)}>完了</button>
@@ -63,7 +63,7 @@ export const App = () => {
             <ul>
               {completeTodos.map((todo, index) => {
                 return (
-                  <li key='todo'>
+                  <li key={todo}>
                     <div className='list-row'>
                       <p>{todo}</p>
                       <button onClick={() => onClickBack(index)}>戻す</button>
