@@ -34,6 +34,7 @@ h1 {
   display: grid;
   grid-template:
     "................... input                ..................." 55px
+    "................... message              ..................." auto
     "incomplete          incomplete           incomplete         " auto
     "complete            complete             complete           " auto
     / minmax(0px, 100px) minmax(300px, 500px) minmax(0px, 100px);

@@ -45,12 +45,25 @@ export const App = () => {
       <h1>ToDoApp-React</h1>
       <div id='flex-container'>
         <main id='grid-container'>
-          <InputTodo todoText={todoText} onChange={onChangeTodoText} onClick={onClickAdd} />
+          <InputTodo
+            todoText={todoText}
+            onChange={onChangeTodoText}
+            onClick={onClickAdd}
+            disabled={incompleteTodos.length >= 5}
+          />
+
+          {incompleteTodos.length >= 5 && (
+            <p style={{ gridArea: 'message', color: 'red', margin: '10px' }}>
+              登録できるtodoは5個までです。タスクを消化しましょう!
+            </p>
+          )}
+
           <IncompleteTodos
             incompleteTodos={incompleteTodos}
             onClickComplete={onClickComplete}
             onClickDelete={onClickDelete}
           />
+
           <CompleteTodos completeTodos={completeTodos} onClickBack={onClickBack} />
         </main>
       </div>
