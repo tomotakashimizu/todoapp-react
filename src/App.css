@@ -38,34 +38,3 @@ h1 {
     "complete            complete             complete           " auto
     / minmax(0px, 100px) minmax(300px, 500px) minmax(0px, 100px);
 }
-
-#incomplete-area {
-  grid-area: incomplete;
-  min-height: 200px;
-  background-color: #c6ffe2;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-#complete-area {
-  grid-area: complete;
-  min-height: 200px;
-  background-color: #ffffe0;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-.title {
-  text-align: center;
-  margin-top: 0;
-  font-weight: bold;
-  color: #666;
-}
-
-.list-row {
-  display: flex;
-  align-items: center;
-  padding-bottom: 4px;
-}
