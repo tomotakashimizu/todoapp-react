@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { IncompleteTodos } from './components/IncompleteTodos';
 import { InputTodo } from './components/InputTodo';
 
 export const App = () => {
@@ -40,22 +41,11 @@ export const App = () => {
       <div id='flex-container'>
         <main id='grid-container'>
           <InputTodo todoText={todoText} onChange={onChangeTodoText} onClick={onClickAdd} />
-          <div id='incomplete-area'>
-            <p className='title'>未完了のTODO</p>
-            <ul>
-              {incompleteTodos.map((todo, index) => {
-                return (
-                  <li key={todo}>
-                    <div className='list-row'>
-                      <p>{todo}</p>
-                      <button onClick={() => onClickComplete(index)}>完了</button>
-                      <button onClick={() => onClickDelete(index)}>削除</button>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <IncompleteTodos
+            incompleteTodos={incompleteTodos}
+            onClickComplete={onClickComplete}
+            onClickDelete={onClickDelete}
+          />
           <div id='complete-area'>
             <p className='title'>完了したTODO</p>
             <ul>
